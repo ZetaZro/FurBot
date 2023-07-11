@@ -3,7 +3,6 @@ Mi Bot De Discord finalmente publico
 
 Como Ejecutar todo alv
 
-
 Necesitas visual code studio
 
 Node.js
