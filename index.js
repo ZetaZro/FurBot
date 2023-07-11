@@ -69,14 +69,14 @@ function delay(time) {
 /////////////////////////////////////////////////////////////
 client.on("guildBanAdd", async (guild, user) => {
   console.log(`a member is banned from a guild`);
-  const despedidas = client.channels.cache.get("949659549139349515")
+  const despedidas = client.channels.cache.get("")
   despedidas.send(`${user.tag} C Fue Baneado`)
   despedidas.send({ files: ["./Archivos/Banned.mp4"] })
 })
 
 client.on('guildMemberRemove', function(member) {
   console.log(member.user.username)
-  const despedidas = client.channels.cache.get("949659549139349515")
+  const despedidas = client.channels.cache.get("")
   despedidas.send(member.user.tag + " c fue del server")
   ///
   const canvas = createCanvas(720, 720)
@@ -114,7 +114,7 @@ client.on('guildMemberRemove', function(member) {
 
 
 client.on('guildMemberAdd', member => {
-const bienvenidas = client.channels.cache.get("949659521125584897")
+const bienvenidas = client.channels.cache.get("")
 
   bienvenidas.send("Bienvenido/a " + member.user.toString() + " al server lee las reglas y pasala bien")
 
@@ -160,8 +160,7 @@ let points = JSON.parse(fs.readFileSync("./UserData.json", "utf8"));
 client.on("messageCreate", message => {
   var prefix = "T!"
   const yiffupdateMain = new yiffupdate();
-// if (message.author.id == 398890367447203871) return
-
+  
   if (!message.content.startsWith(prefix) ) return
 
  //const promise1 = Promise.resolve(y.gay());*/
@@ -185,39 +184,6 @@ if (cmd === "leaderboard"){
   lista()
 }
 
-
-
-  if (cmd === "prueba") {
-  }
-  if (cmd === "messagetokev"){
-message.channel.send("Message sended")
-    client.users.fetch('489214757644009509', false).then((user) => {
-      console.log(argumentos(args,cmd))
-      user.send("" + argumentos(args,cmd));
-     });
-  }
-  if (cmd === "messagetoanth"){
-    message.channel.send("Message sended")
-        client.users.fetch('398890367447203871', false).then((user) => {
-            
-     yiffupdateMain.e621("Gay",1).then(function(result) {
-      console.log(result) 
-          user.send("Artista/s: " + result[0].tags.artist[0]).catch((err) => { message.channel.send("Artista no especificado") });
-          user.send(result[0].file.url)
-         });
-        });
-      }
-      if (cmd === "nsfwtorocki"){
-        message.channel.send("Message sended")
-        client.users.fetch('836277292023545916', false).then((user) => {
-              console.log(args)
-         yiffupdateMain.e621(args[1],1).then(function(result) {
-          console.log(result) 
-              user.send("Artista/s: " + result[0].tags.artist[0]).catch((err) => { message.channel.send("Artista no especificado") });
-              user.send(result[0].file.url).catch((err) => { message.channel.send("Artista no especificado") });
-             });
-            });
-          }
   if (cmd === "caja"){
     message.channel.send("insertar imagen de caja")
     message.channel.send("Has recibido · Nombre de bate ·")
