@@ -1,5 +1,5 @@
 
-/////Programado Por GenericDev#9111 necesitas asistencia mandame un Dm Al Discord
+/////Programado Por zeta.zero necesitas asistencia mandame un Dm Al Discord
 /////De paso gracias por usar mi codigo aunque sea de referencia
 
 const Discord = require("discord.js");
